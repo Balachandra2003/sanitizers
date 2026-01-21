@@ -1,0 +1,21 @@
+Address-Sanitizer:
+1.AddressSanitizer finds memory-related bugs, such as:
+	Buffer overflow (stack/heap)
+	Use-after-free
+	Use-after-return
+	Double free
+	Invalid memory access
+	In short: anything related to wrong memory access
+2. When to use ASan:
+	Pointers
+	Arrays
+	Dynamic memory
+	Low-level C/C++ code
+	
+Missing of these 2 files in llvm bin folder we are not able to see the out but
+clang_rt.asan_dynamic-x86_64.dll
+clang_rt.asan_dbg_dynamic-x86_64.dll
+
+undefined:
+clang_rt.ubsan_standalone-x86_64.lib
+clang_rt.ubsan_standalone_cxx-x86_64.lib
