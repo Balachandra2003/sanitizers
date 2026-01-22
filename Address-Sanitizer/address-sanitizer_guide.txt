@@ -11,11 +11,13 @@ Address-Sanitizer:
 	Arrays
 	Dynamic memory
 	Low-level C/C++ code
+Command:
+clang++ <filename.cpp> -fsanitize=address -g -O0 -o <any name>
+	where:
+		-fsanitize:flag
+		-g:debug
+		-O0:optimizatation level
 	
-Missing of these 2 files in llvm bin folder we are not able to see the out but
+Missing of these 2 files in llvm bin folder we are not able to see the output in the local but using git codespaces we can get output
 clang_rt.asan_dynamic-x86_64.dll
 clang_rt.asan_dbg_dynamic-x86_64.dll
-
-undefined:
-clang_rt.ubsan_standalone-x86_64.lib
-clang_rt.ubsan_standalone_cxx-x86_64.lib

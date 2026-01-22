@@ -1,0 +1,23 @@
+Undefined Behavior Sanitizer:
+In C/C++, undefined behavior means the language standard does not define what should happen. When UB occurs, the program may:
+	Crash
+	Produce wrong results
+	Seem to work “fine”
+	Behave differently on different compilers or optimization levels
+Examples:
+	Signed integer overflow
+	Using a null or misaligned pointer
+	Out-of-bounds array access
+	Calling a function through the wrong type
+	Shifting by a negative or too-large amount
+UBSan exists to catch these problems at runtime.
+Command:
+clang++ <filename.cpp> -fsanitize=undefined -g -O0 -o <any name>
+	where:
+		-fsanitize:flag
+		-g:debug
+		-O0:optimizatation level
+
+undefined:
+clang_rt.ubsan_standalone-x86_64.lib
+clang_rt.ubsan_standalone_cxx-x86_64.lib
